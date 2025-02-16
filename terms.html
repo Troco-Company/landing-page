@@ -1,85 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Troco_NG</title>
-    <meta name="description" content="A Fully Responsive Tailwind CSS Template, personal, agency, application, business, clean, creative, it solutions, startup, career, blog, modern, creative, multipurpose, portfolio, saas, software, tailwind css, etc."/>
-    <meta name="keywords" content="Escrow service, sales, e-commerce, buying, mobile, troco"/>
-    <meta name="author" content="Troco"/>
+    <meta
+      name="description"
+      content="A Fully Responsive Tailwind CSS Template, personal, agency, application, business, clean, creative, it solutions, startup, career, blog, modern, creative, multipurpose, portfolio, saas, software, tailwind css, etc."
+    />
+    <meta
+      name="keywords"
+      content="Escrow service, sales, e-commerce, buying, mobile, troco"
+    />
+    <meta name="author" content="Troco" />
 
     <!-- favicon -->
-    <link href="assets/images/Troco1.png" rel="shortcut icon">
+    <link href="assets/images/Troco1.png" rel="shortcut icon" />
 
     <!-- Icons Css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Jarallax Css -->
-    <link href="assets/libs/jarallax/jarallax.min.css" rel="stylesheet">
+    <link href="assets/libs/jarallax/jarallax.min.css" rel="stylesheet" />
 
     <!-- Swiper Css -->
-    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <style>
+      .terms {
+        margin-top: 150px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
 
-        .terms{
-            margin-top: 150px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
+      .terms_txt {
+        font-size: 50px;
+      }
+      .holder {
+        width: 70%;
+        font-size: 24px;
+        margin-top: 27px;
+        font-weight: 700;
+      }
 
-        .terms_txt{
-            font-size: 50px;
-        }
-        .holder{
-            width: 70%;
-            font-size: 24px;
-            margin-top: 27px;
-            font-weight: 700;
-        }
-
-        .terms p{
-            margin-top: 40px;
-            width: 70%;
-        }
-        .terms h3{
-            width: 70%;
-            font-size: 19px;
-            margin-top: 16px;
-        }
-        .terms h2{
-            width: 70%;
-            font-size: 21px;
-            margin-top: 46px;
-        }
-        a{
-            color: #07b518;
-        }
+      .terms p {
+        margin-top: 40px;
+        width: 70%;
+      }
+      .terms h3 {
+        width: 70%;
+        font-size: 19px;
+        margin-top: 16px;
+      }
+      .terms h2 {
+        width: 70%;
+        font-size: 21px;
+        margin-top: 46px;
+      }
+      a {
+        color: #07b518;
+      }
     </style>
-</head>
-<body>
-    <nav class="navbar fixed top-0 start-0 end-0 z-999 transition-all duration-500 py-5 items-center shadow-md lg:shadow-none [&.is-sticky]:bg-white group [&.is-sticky]:shadow-md bg-white lg:bg-transparent" id="navbar">
-        <div class="container">
-        
-            <div class="flex lg:flex-nowrap flex-wrap items-center">
+  </head>
+  <body>
+    <nav
+      class="navbar fixed top-0 start-0 end-0 z-999 transition-all duration-500 py-5 items-center shadow-md lg:shadow-none [&.is-sticky]:bg-white group [&.is-sticky]:shadow-md bg-white lg:bg-transparent"
+      id="navbar"
+    >
+      <div class="container">
+        <div class="flex lg:flex-nowrap flex-wrap items-center">
+          <a class="flex items-center" href="index.html">
+            <img src="assets/images/troco.png" class="h-9 flex" />
+          </a>
 
-                <a class='flex items-center' href='index.html'>
-                    <img src="assets/images/troco.png" class="h-9 flex">
-                </a>
+          <div class="lg:hidden flex items-center ms-auto px-2.5">
+            <button
+              class="hs-collapse-toggle"
+              type="button"
+              id="hs-unstyled-collapse"
+              data-hs-collapse="#navbarCollapse"
+            >
+              <i data-lucide="menu" class="h-8 w-8 text-black"></i>
+            </button>
+          </div>
 
-                <div class="lg:hidden flex items-center ms-auto px-2.5">
-                    <button class="hs-collapse-toggle" type="button" id="hs-unstyled-collapse" data-hs-collapse="#navbarCollapse">
-                        <i data-lucide="menu" class="h-8 w-8 text-black"></i>
-                    </button>
-                </div>
-
-                <!-- <div class="navigation hs-collapse transition-all duration-300 lg:basis-auto basis-full grow hidden items-center justify-center lg:flex mx-auto overflow-hidden mt-6 lg:mt-0 nav-light" id="navbarCollapse">
+          <!-- <div class="navigation hs-collapse transition-all duration-300 lg:basis-auto basis-full grow hidden items-center justify-center lg:flex mx-auto overflow-hidden mt-6 lg:mt-0 nav-light" id="navbarCollapse">
                     <ul class="navbar-nav flex-col lg:flex-row gap-y-2 flex lg:items-center justify-center" id="navbar-navlist">
                         <li class="nav-item mx-1.5 transition-all text-dark lg:text-black group-[&.is-sticky]:text-dark all duration-300 hover:text-primary [&.active]:!text-primary group-[&.is-sticky]:[&.active]:text-primary">
                             <a class="nav-link inline-flex items-center text-sm lg:text-base font-medium py-0.5 px-2 capitalize" href="#home">Home</a>
@@ -103,244 +114,621 @@
                     </ul>
                 </div> -->
 
-                <div class="ms-auto shrink hidden lg:inline-flex gap-2">
-                    <a href="#" class="py-2 px-6 inline-flex items-center gap-2 rounded-md text-base text-white bg-primary hover:bg-primaryDark transition-all duration-500 font-medium">
-                        <i data-lucide="download-cloud" class="h-4 w-4 fill-white/40"></i>
-                        <span class="hidden sm:block">Download</span>
-                    </a>
-                </div>
-            </div>
+          <div class="ms-auto shrink hidden lg:inline-flex gap-2">
+            <a
+              href="#"
+              class="py-2 px-6 inline-flex items-center gap-2 rounded-md text-base text-white bg-primary hover:bg-primaryDark transition-all duration-500 font-medium"
+            >
+              <i data-lucide="download-cloud" class="h-4 w-4 fill-white/40"></i>
+              <span class="hidden sm:block">Download</span>
+            </a>
+          </div>
         </div>
+      </div>
     </nav>
     <div class="terms">
-        <h1 class="terms_txt">Terms & Conditions</h1>
-        <div class="holder">
-            <p>Welcome to Troco's Terms & Conditions</p>
-        </div>
-        <p>Troco Technology's General Terms and Conditions (henceforth, "Terms") must be carefully read and understood. Going forward, these Terms will govern how you use all Troco.ng services and will take precedence over any previous General Terms and Conditions.</p>
-        <p>These agreements apply to all parties (collectively referred to as the "Parties" or "Underlying Parties") engaged in an escrow transaction involving the escrow services, including the Seller and Buyer. The terms "you" and "Your" refer to the individual or the entity you represent as the Buyer, Seller, or Broker, as applicable, in the context of an Underlying Transaction.
-In addition to these terms, there are other agreements, terms, and conditions that make up the "Troco Technology Terms of Service." Among these agreements are:</p>
-<p>The Troco Technology application's Terms of Use may be found at <a href="https://troco.ng/Terms">https://troco.ng/Terms</a> in the iOS Play Store. Visit <a href="https://troco.ng/#/payments">https://troco.ng/#/payments</a> & refunds and <a href="https://troco.ng/#/privacy-policy">https://troco.ng/#/privacy-policy</a> to view the Privacy Policy. Learn more about us at <a href="https://troco.ng/#/">https://troco.ng/#/</a> The guidelines for any escrow addenda and Transaction Troco technology</p>
-<p>Permission to use an electronic escrow system. By signing up for and utilizing the services, the underling parties consent to Troco technology conducting the escrow transaction (as defined below). For any capitalized term not otherwise defined in the Troco Technology Terms of Service, the meaning and interpretation given below will be applicable. Payments will be made to and taken out of the buyer's or seller's Troco technology account, often known as the "Account." each entry law, regulation, payment network policy, and automated clearinghouse policy that pertains to the services provided under the Troco Terms of Service is referred to as "applicable law." Furthermore, this definition of relevant law also includes any written directives, orders, or rulings from any court or government agency with jurisdiction over the parties, services, or transactions covered by the Troco Technology Limited Terms of Service.</p>
-<h2>Transaction ID:</h2>
-<p style="margin: 0; margin-top: 10px;">Troco offers three categories in creating transaction IDs, each with various duties options.</p>
-<h3>Product service base:</h3>
-<p style="margin: 0; margin-top: 10px;">Transactions can be created utilizing Troco technology to sell or buy commodities such as bags, clothes, phones, shoes, fridges, televisions, beds, tables, cars, fans, air conditioners, laptops, food, and more, with delivery options.</p>
-<h3>Service transaction base:</h3>
-<p style="margin: 0; margin-top: 10px;">Transaction related to services Selecting a service transaction allows you to create a task for your customer, such as creating an android or iOS application, html files, scripts, social networking, WordPress website, theme, or graphics work.</p>
-<h3>Vitual transaction base:</h3>
-<p style="margin: 0; margin-top: 10px;">Create a virtual transaction service for both buyers and sellers, including scripts, apps for Android and iOS, social networking platforms, HTML files, WordPress websites, graphics, and documentation. etc</p>
+      <h1 class="terms_txt">Terms & Conditions</h1>
+      <div class="holder">
+        <p>Welcome to Troco's Terms & Conditions</p>
+      </div>
+      <p>
+        Troco Technology's General Terms and Conditions (henceforth, "Terms")
+        must be carefully read and understood. Going forward, these Terms will
+        govern how you use all Troco.ng services and will take precedence over
+        any previous General Terms and Conditions.
+      </p>
+      <p>
+        These agreements apply to all parties (collectively referred to as the
+        "Parties" or "Underlying Parties") engaged in an escrow transaction
+        involving the escrow services, including the Seller and Buyer. The terms
+        "you" and "Your" refer to the individual or the entity you represent as
+        the Buyer, Seller, or Broker, as applicable, in the context of an
+        Underlying Transaction. In addition to these terms, there are other
+        agreements, terms, and conditions that make up the "Troco Technology
+        Terms of Service." Among these agreements are:
+      </p>
+      <p>
+        The Troco Technology application's Terms of Use may be found at
+        <a href="https://troco.ng/Terms">https://troco.ng/Terms</a> in the iOS
+        Play Store. Visit
+        <a href="https://troco.ng/#/payments">https://troco.ng/#/payments</a> &
+        refunds and
+        <a href="https://troco.ng/#/privacy-policy"
+          >https://troco.ng/#/privacy-policy</a
+        >
+        to view the Privacy Policy. Learn more about us at
+        <a href="https://troco.ng/#/">https://troco.ng/#/</a> The guidelines for
+        any escrow addenda and Transaction Troco technology
+      </p>
+      <p>
+        Permission to use an electronic escrow system. By signing up for and
+        utilizing the services, the underling parties consent to Troco
+        technology conducting the escrow transaction (as defined below). For any
+        capitalized term not otherwise defined in the Troco Technology Terms of
+        Service, the meaning and interpretation given below will be applicable.
+        Payments will be made to and taken out of the buyer's or seller's Troco
+        technology account, often known as the "Account." each entry law,
+        regulation, payment network policy, and automated clearinghouse policy
+        that pertains to the services provided under the Troco Terms of Service
+        is referred to as "applicable law." Furthermore, this definition of
+        relevant law also includes any written directives, orders, or rulings
+        from any court or government agency with jurisdiction over the parties,
+        services, or transactions covered by the Troco Technology Limited Terms
+        of Service.
+      </p>
+      <h2>Transaction ID:</h2>
+      <p style="margin: 0; margin-top: 10px">
+        Troco offers three categories in creating transaction IDs, each with
+        various duties options.
+      </p>
+      <h3>Product service base:</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Transactions can be created utilizing Troco technology to sell or buy
+        commodities such as bags, clothes, phones, shoes, fridges, televisions,
+        beds, tables, cars, fans, air conditioners, laptops, food, and more,
+        with delivery options.
+      </p>
+      <h3>Service transaction base:</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Transaction related to services Selecting a service transaction allows
+        you to create a task for your customer, such as creating an android or
+        iOS application, html files, scripts, social networking, WordPress
+        website, theme, or graphics work.
+      </p>
+      <h3>Vitual transaction base:</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Create a virtual transaction service for both buyers and sellers,
+        including scripts, apps for Android and iOS, social networking
+        platforms, HTML files, WordPress websites, graphics, and documentation.
+        etc
+      </p>
 
-<p style="margin: 0; margin-top: 40px;">The "Arbitration Commencement Duration" is the time frame that the buyer and seller have decided upon; the calendar period begins after the mediation time.</p>
+      <p style="margin: 0; margin-top: 40px">
+        The "Arbitration Commencement Duration" is the time frame that the buyer
+        and seller have decided upon; the calendar period begins after the
+        mediation time.
+      </p>
 
-<h3>Seller:</h3>
-<p style="margin: 0; margin-top: 10px;">A seller is an individual or vendor who offers to sell their own items or services using the Troco app.</p>
+      <h3>Seller:</h3>
+      <p style="margin: 0; margin-top: 10px">
+        A seller is an individual or vendor who offers to sell their own items
+        or services using the Troco app.
+      </p>
 
-<h3>Buyer:</h3>
-<p style="margin: 0; margin-top: 10px;">The term "buyer" refers to any individual or business that select to use the app to purchase products or services from a vendor.</p>
+      <h3>Buyer:</h3>
+      <p style="margin: 0; margin-top: 10px">
+        The term "buyer" refers to any individual or business that select to use
+        the app to purchase products or services from a vendor.
+      </p>
 
-<h3>Inspection period :</h3>
-<p style="margin: 0; margin-top: 10px;">The time range that the seller specifies for the buyer to inspect is known as the <strong> "Inspection Period."</strong></p>
+      <h3>Inspection period :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        The time range that the seller specifies for the buyer to inspect is
+        known as the <strong> "Inspection Period."</strong>
+      </p>
 
-<h3>Admin :</h3>
-<p style="margin: 0; margin-top: 10px;">In addition to acting as an eyewitness throughout the transaction, the admin robot enforces the law between the buyer and seller and offers advice on the laws that apply during transactions.</p>
-<h3>Escrow :</h3>
-<p style="margin: 0; margin-top: 10px;"><strong>"Escrow Fees"</strong> are the payments charged by Troco Technology for the services rendered.</p>
-<h3>Calculator :</h3>
-<p style="margin: 0; margin-top: 10px;">Escrow Calculator An escrow converter is meant to assist customers figure out the precise fees or expenses related to utilizing Troco technology to support your business.</p>
+      <h3>Admin :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        In addition to acting as an eyewitness throughout the transaction, the
+        admin robot enforces the law between the buyer and seller and offers
+        advice on the laws that apply during transactions.
+      </p>
+      <h3>Escrow :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        <strong>"Escrow Fees"</strong> are the payments charged by Troco
+        Technology for the services rendered.
+      </p>
+      <h3>Calculator :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Escrow Calculator An escrow converter is meant to assist customers
+        figure out the precise fees or expenses related to utilizing Troco
+        technology to support your business.
+      </p>
 
-<h3>Create Order :</h3>
-<p style="margin: 0; margin-top: 10px;">The "create order" portion of Troco allows you to list products you wish to sell, set time flames throughout business hours, create transactions, and keep track of every aspect necessary to keep your business running well. A profitable, fully functional steadfast is the outcome of the administrator's supervision of the entire transaction, approval of payment, and assurance that there are no errors.
-</p>
+      <h3>Create Order :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        The "create order" portion of Troco allows you to list products you wish
+        to sell, set time flames throughout business hours, create transactions,
+        and keep track of every aspect necessary to keep your business running
+        well. A profitable, fully functional steadfast is the outcome of the
+        administrator's supervision of the entire transaction, approval of
+        payment, and assurance that there are no errors.
+      </p>
 
-<h3>Chat Platform :</h3>
-<p style="margin: 0; margin-top: 10px;">Buyers and sellers can use chat platforms as a means of negotiating the conditions of their business dealings. In order to provide Troco technology with documentation in the event that issues arise during the transaction, an administrator monitors the conversation.
-</p>
-<h3>Invite Clients :</h3>
-<p style="margin: 0; margin-top: 10px;">Once an order has been generated, invite friends from your contact list to utilize the platform to conduct business.
-</p>
-<h3>Wallet ID :</h3>
-<p style="margin: 0; margin-top: 10px;">Troco technology provides you a wallet, which utilizes an ID that allows you to access all referral rewards and transaction payouts. Troco technology enables wallets to facilitate payments between buyers and sellers. Once a transaction is completed and a referral reward has been credited to your wallet, customers is able to request a withdrawal from your digital wallet and Troco technology will deposit funds to your bank account.
-</p>
-<h3>Referral Link :</h3>
-<p style="margin: 0; margin-top: 10px;">10% of the escrow charge will be credited to the referral's account upon successful completion of a transaction if you use the link to invite friends to create account with Troco Technology. 
-</p>
-<h3>Tracker :</h3>
-<p style="margin: 0; margin-top: 10px;">Trackers let you monitor transactions in Troco technology to find out the precise location of the product and to ensure you are utilizing it as instructed by Troco.
-</p>
+      <h3>Chat Platform :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Buyers and sellers can use chat platforms as a means of negotiating the
+        conditions of their business dealings. In order to provide Troco
+        technology with documentation in the event that issues arise during the
+        transaction, an administrator monitors the conversation.
+      </p>
+      <h3>Invite Clients :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Once an order has been generated, invite friends from your contact list
+        to utilize the platform to conduct business.
+      </p>
+      <h3>Wallet ID :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Troco technology provides you a wallet, which utilizes an ID that allows
+        you to access all referral rewards and transaction payouts. Troco
+        technology enables wallets to facilitate payments between buyers and
+        sellers. Once a transaction is completed and a referral reward has been
+        credited to your wallet, customers is able to request a withdrawal from
+        your digital wallet and Troco technology will deposit funds to your bank
+        account.
+      </p>
+      <h3>Referral Link :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        10% of the escrow charge will be credited to the referral's account upon
+        successful completion of a transaction if you use the link to invite
+        friends to create account with Troco Technology.
+      </p>
+      <h3>Tracker :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Trackers let you monitor transactions in Troco technology to find out
+        the precise location of the product and to ensure you are utilizing it
+        as instructed by Troco.
+      </p>
 
-<h3>KYC Account Limit :</h3>
-<p style="margin: 0; margin-top: 10px;">Your account will be strengthened by submitting your biodata to Troco KYC, and you will be able to use Toco technology to conduct any number of transactions missing submitting your address and ID. fortunately, your account's capacity has a limit.
-</p>
+      <h3>KYC Account Limit :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Your account will be strengthened by submitting your biodata to Troco
+        KYC, and you will be able to use Toco technology to conduct any number
+        of transactions missing submitting your address and ID. fortunately,
+        your account's capacity has a limit.
+      </p>
 
-<h3>Return Transaction :</h3>
-<p style="margin: 0; margin-top: 10px;">The buyer returns the item that the seller provided if it fails to meet the precise requirements that were agreed upon by both parties. 
-</p>
+      <h3>Return Transaction :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        The buyer returns the item that the seller provided if it fails to meet
+        the precise requirements that were agreed upon by both parties.
+      </p>
 
-<h3>Transaction Dashboard :</h3>
-<p style="margin: 0; margin-top: 10px;">inevitably can use the Troco Technology transaction dashboard to see the total number of transactions you've completed and to assess your transaction statistics as a buyer or seller to evaluate how your transaction is proceeding.
-</p>
-<h3>Cancelling Transaction :</h3>
-<p style="margin: 0; margin-top: 10px;">Troco will notify each Party via email if an Underlying Transaction cannot be completed due to any cause, including termination by Troco Technologies. If no Party hits the "Agree" button in the Transaction Details Screens to agree to the terms, Troco Technologies reserves the right to cancel the Underlying Transaction. Troco technology's terms of service define how to cancel an underlying transaction.
-</p>
+      <h3>Transaction Dashboard :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        inevitably can use the Troco Technology transaction dashboard to see the
+        total number of transactions you've completed and to assess your
+        transaction statistics as a buyer or seller to evaluate how your
+        transaction is proceeding.
+      </p>
+      <h3>Cancelling Transaction :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Troco will notify each Party via email if an Underlying Transaction
+        cannot be completed due to any cause, including termination by Troco
+        Technologies. If no Party hits the "Agree" button in the Transaction
+        Details Screens to agree to the terms, Troco Technologies reserves the
+        right to cancel the Underlying Transaction. Troco technology's terms of
+        service define how to cancel an underlying transaction.
+      </p>
 
-<h3>Digital Knowledge :</h3>
-<p style="margin: 0; margin-top: 10px;">You comprehend the fact Troco technology will create, provide, and confirm a digital identity (a "Digital ID") for each User. This Digital ID is included with every permitted electronic document and notification email sent. You have accepted that Your Digital ID is a valid "Electronic Signature." Please see the General Escrow Instructions for more information on how Troco technology makes use of Digital ID.</p>
+      <h3>Digital Knowledge :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        You comprehend the fact Troco technology will create, provide, and
+        confirm a digital identity (a "Digital ID") for each User. This Digital
+        ID is included with every permitted electronic document and notification
+        email sent. You have accepted that Your Digital ID is a valid
+        "Electronic Signature." Please see the General Escrow Instructions for
+        more information on how Troco technology makes use of Digital ID.
+      </p>
 
-<h3>Payment :</h3>
-    <p style="margin: 0; margin-top: 10px;"><strong>A)</strong> All Escrowed Funds payable to one of the Underlying Participants must be transferred to the appropriate Account as soon as feasible following Buyer acceptance, Seller acceptance, or dispute resolution. If the Buyer overpays, Troco will reimburse the overpayment following the Closing of Troco. If an Underlying Party is overpaid, the recipient must quickly repay the overpaid amount to Troco.If an alternate payment is required, the recipient must also pay any associated delivery and/or wiring fees. The Underlying Parties shall further indemnify Troco against any damage resulting from currency conversion.</p>
+      <h3>Payment :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        <strong>A)</strong> All Escrowed Funds payable to one of the Underlying
+        Participants must be transferred to the appropriate Account as soon as
+        feasible following Buyer acceptance, Seller acceptance, or dispute
+        resolution. If the Buyer overpays, Troco will reimburse the overpayment
+        following the Closing of Troco. If an Underlying Party is overpaid, the
+        recipient must quickly repay the overpaid amount to Troco.If an
+        alternate payment is required, the recipient must also pay any
+        associated delivery and/or wiring fees. The Underlying Parties shall
+        further indemnify Troco against any damage resulting from currency
+        conversion.
+      </p>
 
-    <p style="margin: 0; margin-top: 10px;"><strong>B)</strong> To make a payment using Troco, the buyer have to select a bank and enter their account information. The full bank information will be required to make a payment to Troco.The administrator will be notified once the payment has been credited to Troco's bank account. the transaction will not be carried out until funds is received.
-    </p>
-    <p style="margin: 0; margin-top: 10px;"><strong>C)</strong>Any third-party payments, including delivery of the merchandise and return delivery, have to be handled by the buyer and seller.</p>
+      <p style="margin: 0; margin-top: 10px">
+        <strong>B)</strong> To make a payment using Troco, the buyer have to
+        select a bank and enter their account information. The full bank
+        information will be required to make a payment to Troco.The
+        administrator will be notified once the payment has been credited to
+        Troco's bank account. the transaction will not be carried out until
+        funds is received.
+      </p>
+      <p style="margin: 0; margin-top: 10px">
+        <strong>C)</strong>Any third-party payments, including delivery of the
+        merchandise and return delivery, have to be handled by the buyer and
+        seller.
+      </p>
 
-    <h3>Fees Agreement :</h3>
-<p style="margin: 0; margin-top: 10px;">Buyer agrees to pay all associated fees, including third-party service fees (e.g., delivery, appraisal, inspection, Goods website - scripts, etc.) and any other fees specified on the platform, at the time the transaction escrow Instructions are agreed upon by all Users, unless otherwise agreed upon by each User in the Transaction. Once paid, Troco technology fees are nonrefundable. Troco technology retains the right to adjust its fees on a regular basis at its sole discretion.</p>
-    <h3>Protection :</h3>
-<p style="margin: 0; margin-top: 10px;">To safeguard the information you provide Troco technology, the firm uses secure sockets layer ("SSL"), a security technology that provides message integrity, server authentication, and data encryption for Internet connections. Troco technology has also implemented a security mechanism that requires a user ID and password to access Your platform transactions. You agree to keep your password private, not share it with anyone else, and to keep it masked from strangers.</p>
-    <h3>Identifying the Risk :</h3>
-<p style="margin: 0; margin-top: 10px;">Customers clearly understand that there is no risk to you in utilizing the Services. The Escrow Services are provided "as is" and "as available" with no guarantees.</p>
+      <h3>Fees Agreement :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Buyer agrees to pay all associated fees, including third-party service
+        fees (e.g., delivery, appraisal, inspection, Goods website - scripts,
+        etc.) and any other fees specified on the platform, at the time the
+        transaction escrow Instructions are agreed upon by all Users, unless
+        otherwise agreed upon by each User in the Transaction. Once paid, Troco
+        technology fees are nonrefundable. Troco technology retains the right to
+        adjust its fees on a regular basis at its sole discretion.
+      </p>
+      <h3>Protection :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        To safeguard the information you provide Troco technology, the firm uses
+        secure sockets layer ("SSL"), a security technology that provides
+        message integrity, server authentication, and data encryption for
+        Internet connections. Troco technology has also implemented a security
+        mechanism that requires a user ID and password to access Your platform
+        transactions. You agree to keep your password private, not share it with
+        anyone else, and to keep it masked from strangers.
+      </p>
+      <h3>Identifying the Risk :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Customers clearly understand that there is no risk to you in utilizing
+        the Services. The Escrow Services are provided "as is" and "as
+        available" with no guarantees.
+      </p>
 
-<h3>Customer Care :</h3>
-<p style="margin: 0; margin-top: 10px;">Troco's customercare representatives allow you to communicate with them directly live in the app to resolve any issues.</p>
-<p style="margin: 0; margin-top: 10px;">The concept of "Troco Technology Instructions" relates to the entire set of rules, standards, and specifics that govern an escrow transaction. It includes the general Troco technology Instructions, which apply to all transactions, the Agreement on Troco technology Instructions, which have been decided upon by the Within Parties when they arrange an Underlying Transaction, and any additional instructions that the Parties may later agree to. "Troco Technology" refers to the practice of retaining short-term funds.
-</p>
-<p style="margin: 0; margin-top: 10px;">
-    The concept "Troco Technology Act" refers to the portion of a transaction that includes escrow services offered by Troco. Such amenities may include maintaining and releasing escrow funds or property in accordance with the guidelines and the escrow instructions. The rules and standards issued in the online platform that apply to all escrow transactions are known as the "Governor Escrow Instructions."
-    </p>
-<p style="margin: 0; margin-top: 10px;">
-    The term "seller services" refers to any tangible assets or property that a seller offers for sale, such as websites, social media platforms, icons, graphic works, systems for performing work, vehicles, land, houses, and other services, as well as scripts.
-    </p>
-    <h3>Limited Services :</h3>
-    <p style="margin: 0; margin-top: 10px;">Escrow services can only be used for legitimate products, seller services, and underlying transactions. Troco Technology Limited retains the privilege to decline or prohibit an Underlying Transaction at any time. Furthermore, there can be limitations on the escrow services; they are clarified via the Troco Technology Terms of Service on the online platform. Users must be registered in order to access the escrow services. To register, you have to enter all the information that the platform requires for.</p>
+      <h3>Customer Care :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Troco's customercare representatives allow you to communicate with them
+        directly live in the app to resolve any issues.
+      </p>
+      <p style="margin: 0; margin-top: 10px">
+        The concept of "Troco Technology Instructions" relates to the entire set
+        of rules, standards, and specifics that govern an escrow transaction. It
+        includes the general Troco technology Instructions, which apply to all
+        transactions, the Agreement on Troco technology Instructions, which have
+        been decided upon by the Within Parties when they arrange an Underlying
+        Transaction, and any additional instructions that the Parties may later
+        agree to. "Troco Technology" refers to the practice of retaining
+        short-term funds.
+      </p>
+      <p style="margin: 0; margin-top: 10px">
+        The concept "Troco Technology Act" refers to the portion of a
+        transaction that includes escrow services offered by Troco. Such
+        amenities may include maintaining and releasing escrow funds or property
+        in accordance with the guidelines and the escrow instructions. The rules
+        and standards issued in the online platform that apply to all escrow
+        transactions are known as the "Governor Escrow Instructions."
+      </p>
+      <p style="margin: 0; margin-top: 10px">
+        The term "seller services" refers to any tangible assets or property
+        that a seller offers for sale, such as websites, social media platforms,
+        icons, graphic works, systems for performing work, vehicles, land,
+        houses, and other services, as well as scripts.
+      </p>
+      <h3>Limited Services :</h3>
+      <p style="margin: 0; margin-top: 10px">
+        Escrow services can only be used for legitimate products, seller
+        services, and underlying transactions. Troco Technology Limited retains
+        the privilege to decline or prohibit an Underlying Transaction at any
+        time. Furthermore, there can be limitations on the escrow services; they
+        are clarified via the Troco Technology Terms of Service on the online
+        platform. Users must be registered in order to access the escrow
+        services. To register, you have to enter all the information that the
+        platform requires for.
+      </p>
 
-    <p style="margin: 0; margin-top: 20px;"><strong>Escrow :</strong> is part of a transaction involving the sale of goods or services, Troco Technology Limited serves as an escrow agency for both the buyer and the seller. The transaction management services provided by the escrow are online. According to Troco Technology's Terms of Service, Troco services are designed to make it simpler to finish the Underlying Transaction. Although one or more of the underlying parties and the escrowwed property or merchandise may be citizens or residents in a particular location,
-    </p>
-    <h3>Illegal  Transactions :</h3>
-    <ul style="margin: 0; margin-top: 20px; width: 70%; list-style-type: disc;">
-        <li style="margin-bottom: 10px;">Users must follow the guidelines that prohibit our services from being misused.</li>
-        <li style="margin-bottom: 10px;">Any content that is unlawful, contains criminal elements, or is being used for illegal purposes is prohibited.</li>
-        <li style="margin-bottom: 10px;">Content that incorporates pornographic material is not allowed.</li>
-        <li style="margin-bottom: 10px;">The inclusion of illicit substances, narcotics, alcohol, or tobacco products is prohibited.</li>
-        <li style="margin-bottom: 10px;">Transactional use of money, including digital Naira, is restricted exclusively to permissible purposes.</li>
-        <li>
-            Creating multiple accounts is not allowed. Additionally, TrocoTechnology Limited reserves the exclusive right, at its sole discretion, to decline any underlying transaction that it reasonably believes to be illegal, conducted by a third party other than the account owner, or in violation of Troco Technology's Terms of Service or any applicable laws.
-            <br />
-            Each user agrees to indemnify and hold harmless TrocoTechnology Limited, its officers, directors, employees, and agents from any losses, including legal fees and costs, resulting from violations of the company's Terms of Service. These include, but are not limited to, the misuse of escrow services for prohibited transactions.
+      <p style="margin: 0; margin-top: 20px">
+        <strong>Escrow :</strong> is part of a transaction involving the sale of
+        goods or services, Troco Technology Limited serves as an escrow agency
+        for both the buyer and the seller. The transaction management services
+        provided by the escrow are online. According to Troco Technology's Terms
+        of Service, Troco services are designed to make it simpler to finish the
+        Underlying Transaction. Although one or more of the underlying parties
+        and the escrowwed property or merchandise may be citizens or residents
+        in a particular location,
+      </p>
+      <h3>Illegal Transactions :</h3>
+      <ul
+        style="margin: 0; margin-top: 20px; width: 70%; list-style-type: disc"
+      >
+        <li style="margin-bottom: 10px">
+          Users must follow the guidelines that prohibit our services from being
+          misused.
         </li>
-    </ul>
-    
-    <p style="margin: 0; margin-top: 20px; margin-bottom: 160px;">
-        Your actions grant Troco Technology permission to obtain the information required to complete the escrow transaction from third-party websites if you access the Site through them (such as auction houses, exchanges, or online intermediaries that host electronic marketplaces and facilitate business-to-business transactions). You promise Troco Technologies or any associated third party that all of the information you provide is accurate, complete, and true. In addition, you understand and agree that you will be in charge of promptly notifying Troco Technology if there are any significant changes to this information before an escrow transaction is completed.
-    </p>
+        <li style="margin-bottom: 10px">
+          Any content that is unlawful, contains criminal elements, or is being
+          used for illegal purposes is prohibited.
+        </li>
+        <li style="margin-bottom: 10px">
+          Content that incorporates pornographic material is not allowed.
+        </li>
+        <li style="margin-bottom: 10px">
+          The inclusion of illicit substances, narcotics, alcohol, or tobacco
+          products is prohibited.
+        </li>
+        <li style="margin-bottom: 10px">
+          Transactional use of money, including digital Naira, is restricted
+          exclusively to permissible purposes.
+        </li>
+        <li>
+          Creating multiple accounts is not allowed. Additionally,
+          TrocoTechnology Limited reserves the exclusive right, at its sole
+          discretion, to decline any underlying transaction that it reasonably
+          believes to be illegal, conducted by a third party other than the
+          account owner, or in violation of Troco Technology's Terms of Service
+          or any applicable laws.
+          <br />
+          Each user agrees to indemnify and hold harmless TrocoTechnology
+          Limited, its officers, directors, employees, and agents from any
+          losses, including legal fees and costs, resulting from violations of
+          the company's Terms of Service. These include, but are not limited to,
+          the misuse of escrow services for prohibited transactions.
+        </li>
+      </ul>
+
+      <p style="margin: 0; margin-top: 20px; margin-bottom: 160px">
+        Your actions grant Troco Technology permission to obtain the information
+        required to complete the escrow transaction from third-party websites if
+        you access the Site through them (such as auction houses, exchanges, or
+        online intermediaries that host electronic marketplaces and facilitate
+        business-to-business transactions). You promise Troco Technologies or
+        any associated third party that all of the information you provide is
+        accurate, complete, and true. In addition, you understand and agree that
+        you will be in charge of promptly notifying Troco Technology if there
+        are any significant changes to this information before an escrow
+        transaction is completed.
+      </p>
     </div>
     <footer class="bg-[#17243A]">
+      <div class="container">
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 pb-16 pt-16"
+        >
+          <div class="col-span-full lg:col-span-2">
+            <div class="max-w-2xl mx-auto">
+              <div class="flex items-center">
+                <img src="assets/images/Troco1.png" alt="" class="h-20 me-5" />
+              </div>
+              <p class="text-gray-300 max-w-xs mt-6">
+                No matter where the transaction is taking place, people use
+                Troco when they need to acquire or sell something of value but
+                don't know the other party.
+              </p>
+            </div>
+
+            <div class="mt-6 grid space-y-3">
+              <a
+                class="inline-flex items-center gap-x-4 text-gray-300 hover:text-gray-400 transition-all duration-300"
+                href="#"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                Trococompany@gmail.com
+              </a>
+
+              <a
+                class="inline-flex items-center gap-x-4 text-gray-300 hover:text-gray-400 transition-all duration-300"
+                href="#"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-phone"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                (888) 253 145 148
+              </a>
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <h4 class="font-semibold text-gray-100 uppercase">Company</h4>
+
+            <div class="mt-6 grid space-y-3">
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >Home</a
+                >
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >About</a
+                >
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >Features</a
+                >
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >Testimonials</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <h4 class="font-semibold text-gray-100 uppercase">Product</h4>
+
+            <div class="mt-6 grid space-y-3">
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >Services</a
+                >
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >Download</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <h4 class="font-semibold text-gray-100 uppercase">
+              Important Links
+            </h4>
+
+            <div class="mt-6 grid space-y-3">
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="privacy_policy.html"
+                  >Privacy Policy
+                </a>
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="terms.html"
+                  >Terms & Conditions</a
+                >
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="safety.html"
+                  >Protection & Safety</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-4 bg-[#1C2940]">
+        <!-- 1B283F -->
         <div class="container">
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 pb-16 pt-16">
-                <div class="col-span-full lg:col-span-2">
-                    <div class="max-w-2xl mx-auto">
-                        <div class="flex items-center">
-                            <img src="assets/images/Troco1.png" alt="" class="h-20 me-5">
-                        </div>
-                        <p class="text-gray-300 max-w-xs mt-6">No matter where the transaction is taking place, people use Troco when they need to acquire or sell something of value but don't know the other party.</p>
-                    </div>
+          <div class="flex justify-between items-center">
+            <p class="text-base text-white">
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              © Troco Nigeria
+            </p>
 
-                    <div class="mt-6 grid space-y-3">
-                        <a class="inline-flex items-center gap-x-4 text-gray-300 hover:text-gray-400 transition-all duration-300" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            Trococompany@gmail.com
-                        </a>
-
-                        <a class="inline-flex items-center gap-x-4 text-gray-300 hover:text-gray-400 transition-all duration-300" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            (888) 253 145 148
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-span-1">
-                    <h4 class="font-semibold text-gray-100 uppercase">Company</h4>
-    
-                    <div class="mt-6 grid space-y-3">
-                        <p><a class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300" href="#">Home</a></p>
-                        <p><a class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300" href="#">About</a></p>
-                        <p><a class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300" href="#">Features</a></p>
-                        <p><a class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300" href="#">Testimonials</a></p>
-
-                    </div>
-                </div>
-    
-                <div class="col-span-1">
-                    <h4 class="font-semibold text-gray-100 uppercase">Product</h4>
-        
-                    <div class="mt-6 grid space-y-3">
-                        <p><a class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300" href="#">Services</a></p>
-                        <p><a class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300" href="#">Download</a></p>
-                    </div>
-                </div>
-
-                <div class="col-span-1">
-                    <h4 class="font-semibold text-gray-100 uppercase">Important Links</h4>
-    
-                    <div class="mt-6 grid space-y-3">
-                        <p><a class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300" href="privacy_policy.html">Privacy Policy </a></p>
-                        <p><a class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300" href="terms.html">Terms & Conditions</a></p>
-                    </div>
-                </div>
+            <div>
+              <a
+                class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-md border border-transparent text-white hover:bg-primary transition-all duration-300"
+                href="#"
+              >
+                <svg
+                  class="flex-shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-md border border-transparent text-white hover:bg-primary transition-all duration-300"
+                href="#"
+              >
+                <svg
+                  class="flex-shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-md border border-transparent text-white hover:bg-primary transition-all duration-300"
+                href="#"
+              >
+                <svg
+                  class="flex-shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                  />
+                </svg>
+              </a>
             </div>
+          </div>
         </div>
-
-        <div class="py-4 bg-[#1C2940]">
-            <!-- 1B283F -->
-            <div class="container">
-                <div class="flex justify-between items-center">
-                    <p class="text-base text-white"><script>document.write(new Date().getFullYear())</script>© Troco Nigeria</p>
-
-                    <div>
-                        <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-md border border-transparent text-white hover:bg-primary transition-all duration-300" href="#">
-                            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                            </svg>
-                        </a>
-                        <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-md border border-transparent text-white hover:bg-primary transition-all duration-300" href="#">
-                            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
-                            </svg>
-                        </a>
-                        <a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-md border border-transparent text-white hover:bg-primary transition-all duration-300" href="#">
-                            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                            </svg>
-                        </a>
-                        
-                    </div>
-                </div>
-
-            
-            </div>
-        </div>
-    
+      </div>
     </footer>
-    
-</body>
-<!-- Preline Js -->
-<script src="assets/libs/preline/preline.js" ></script>
+  </body>
+  <!-- Preline Js -->
+  <script src="assets/libs/preline/preline.js"></script>
 
-<!-- Lucide Js -->
-<script src="assets/libs/lucide/umd/lucide.min.js"></script>
+  <!-- Lucide Js -->
+  <script src="assets/libs/lucide/umd/lucide.min.js"></script>
 
-<!-- Gumshoe Js -->
-<script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
+  <!-- Gumshoe Js -->
+  <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
 
-<!-- Jarallax Js -->
-<script src="assets/libs/jarallax/jarallax.min.js"></script>
+  <!-- Jarallax Js -->
+  <script src="assets/libs/jarallax/jarallax.min.js"></script>
 
-<!-- Swiper Bundle Js -->
-<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper Bundle Js -->
+  <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
 
-<!-- Swiper Js -->
-<script src="assets/js/swiper.js"></script>
+  <!-- Swiper Js -->
+  <script src="assets/js/swiper.js"></script>
 
-<!-- Main App Js -->
-<script src="assets/js/app.js" ></script>
+  <!-- Main App Js -->
+  <script src="assets/js/app.js"></script>
 </html>
