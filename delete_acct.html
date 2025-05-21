@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Account - Troco</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Troco_NG</title>
+    <meta
+      name="description"
+      content="A Fully Responsive Tailwind CSS Template, personal, agency, application, business, clean, creative, it solutions, startup, career, blog, modern, creative, multipurpose, portfolio, saas, software, tailwind css, etc."
+    />
+    <meta
+      name="keywords"
+      content="Escrow service, sales, e-commerce, buying, mobile, troco"
+    />
+    <meta name="author" content="Troco" />
+
+    <!-- favicon -->
+    <link href="assets/images/Troco1.png" rel="shortcut icon" />
+
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Jarallax Css -->
+    <link href="assets/libs/jarallax/jarallax.min.css" rel="stylesheet" />
+
+    <!-- Swiper Css -->
+    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <style>
+      .terms {
+        margin-top: 150px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 100px;
+      }
+
+      .terms_txt {
+        font-size: 50px;
+        color: #e53e3e;
+      }
+
+      /* Delete Account Form Styles */
+      .delete-account-container {
+        width: 70%;
+        max-width: 600px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        padding: 30px;
+        margin-top: 30px;
+      }
+
+      .form-description {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 18px;
+        color: #666;
+      }
+
+      .warning-box {
+        background-color: #fff5f5;
+        border: 1px solid #fed7d7;
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 25px;
+      }
+
+      .warning-box h3 {
+        color: #e53e3e;
+        margin-bottom: 10px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+      }
+
+      .warning-box h3 svg {
+        margin-right: 8px;
+      }
+
+      .warning-box p {
+        color: #666;
+        font-size: 14px;
+        margin-top: 0;
+        width: 100%;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #444;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+
+      .form-group input:focus {
+        outline: none;
+        border-color: #e53e3e;
+        box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+      }
+
+      .delete-btn {
+        background-color: #e53e3e;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s;
+      }
+
+      .delete-btn:hover {
+        background-color: #c53030;
+      }
+
+      .cancel-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #666;
+        text-decoration: none;
+      }
+
+      .cancel-link:hover {
+        color: #333;
+        text-decoration: underline;
+      }
+
+      /* Modal styles */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+      }
+
+      .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal {
+        background-color: white;
+        border-radius: 12px;
+        padding: 30px;
+        width: 90%;
+        max-width: 450px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transform: translateY(-20px);
+        transition: transform 0.3s;
+      }
+
+      .modal-overlay.active .modal {
+        transform: translateY(0);
+      }
+
+      .modal-header {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .modal-header h2 {
+        color: #e53e3e;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .modal-content {
+        margin-bottom: 25px;
+      }
+
+      .modal-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .modal-btn {
+        flex: 1;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s;
+      }
+
+      .confirm-btn {
+        background-color: #e53e3e;
+        color: white;
+      }
+
+      .confirm-btn:hover {
+        background-color: #c53030;
+      }
+
+      .cancel-btn {
+        background-color: #e2e8f0;
+        color: #4a5568;
+      }
+
+      .cancel-btn:hover {
+        background-color: #cbd5e0;
+      }
+
+      /* Success message */
+      .success-message {
+        display: none;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .success-message svg {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+      }
+
+      .success-message h2 {
+        color: #38a169;
+        margin-bottom: 15px;
+        font-size: 24px;
+      }
+
+      .success-message p {
+        color: #666;
+        margin-bottom: 25px;
+        width: 100%;
+      }
+
+      .home-btn {
+        background-color: #07b518;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .home-btn:hover {
+        background-color: #059414;
+      }
+
+      /* Error message */
+      .error-message {
+        display: none;
+        background-color: #fff5f5;
+        border: 1px solid #fed7d7;
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 25px;
+        color: #e53e3e;
+        text-align: center;
+      }
+
+      /* Loading spinner */
+      .spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s ease-in-out infinite;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .loading-text {
+        display: none;
+      }
+
+      .delete-btn.loading .loading-text {
+        display: inline;
+      }
+
+      .delete-btn.loading .normal-text {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .delete-account-container {
+          width: 90%;
+          padding: 20px;
+        }
+
+        .terms_txt {
+          font-size: 36px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar fixed top-0 start-0 end-0 z-999 transition-all duration-500 py-5 items-center shadow-md lg:shadow-none [&.is-sticky]:bg-white group [&.is-sticky]:shadow-md bg-white lg:bg-transparent"
+      id="navbar"
+    >
+      <div class="container">
+        <div class="flex lg:flex-nowrap flex-wrap items-center">
+          <a class="flex items-center" href="index.html">
+            <img src="assets/images/troco.png" class="h-9 flex" />
+          </a>
+
+          <div class="lg:hidden flex items-center ms-auto px-2.5">
+            <button
+              class="hs-collapse-toggle"
+              type="button"
+              id="hs-unstyled-collapse"
+              data-hs-collapse="#navbarCollapse"
+            >
+              <i data-lucide="menu" class="h-8 w-8 text-black"></i>
+            </button>
+          </div>
+
+          <div class="ms-auto shrink hidden lg:inline-flex gap-2">
+            <a
+              href="#"
+              class="py-2 px-6 inline-flex items-center gap-2 rounded-md text-base text-white bg-primary hover:bg-primaryDark transition-all duration-500 font-medium"
+            >
+              <i data-lucide="download-cloud" class="h-4 w-4 fill-white/40"></i>
+              <span class="hidden sm:block">Download</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Delete Account Form Section -->
+    <div class="terms">
+      <h1 class="terms_txt">Delete Your Account</h1>
+
+      <div class="delete-account-container" id="delete-form-container">
+        <p class="form-description">
+          We're sorry to see you go. Please confirm your details below to delete
+          your account.
+        </p>
+
+        <div class="warning-box">
+          <h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#e53e3e"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            Warning
+          </h3>
+          <p>
+            This action cannot be undone. Once you delete your account, all your
+            data will be permanently removed from our system.
+          </p>
+        </div>
+
+        <div id="error-message" class="error-message">
+          An error occurred while trying to delete your account. Please try
+          again.
+        </div>
+
+        <form id="delete-account-form">
+          <div class="form-group">
+            <label for="firstOrLastName">First or Last Name</label>
+            <input
+              type="text"
+              id="firstOrLastName"
+              name="firstOrLastName"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <button type="submit" class="delete-btn" id="delete-btn">
+            <span class="spinner" id="spinner" style="display: none"></span>
+            <span class="normal-text">Delete My Account</span>
+            <span class="loading-text">Deleting Account...</span>
+          </button>
+        </form>
+
+        <a href="index.html" class="cancel-link"
+          >Cancel and return to account</a
+        >
+      </div>
+
+      <!-- Success message (initially hidden) -->
+      <div
+        class="delete-account-container success-message"
+        id="success-container"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#38a169"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <h2>Account Deleted Successfully</h2>
+        <p>
+          Your account and all associated data have been permanently removed
+          from our system.
+        </p>
+        <button class="home-btn" id="home-btn">
+          <a href="index.html">Return to Home</a>
+        </button>
+      </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal-overlay" id="confirmation-modal">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Confirm Account Deletion</h2>
+        </div>
+        <div class="modal-content">
+          <p>
+            Are you absolutely sure you want to delete your account? This action
+            cannot be undone and all your data will be permanently lost.
+          </p>
+        </div>
+        <div class="modal-buttons">
+          <button class="modal-btn cancel-btn" id="modal-cancel-btn">
+            Cancel
+          </button>
+          <button class="modal-btn confirm-btn" id="modal-confirm-btn">
+            Yes, Delete
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-[#17243A]">
+      <div class="container">
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 pb-16 pt-16"
+        >
+          <div class="col-span-full lg:col-span-2">
+            <div class="max-w-2xl mx-auto">
+              <div class="flex items-center">
+                <img src="assets/images/Troco1.png" alt="" class="h-20 me-5" />
+              </div>
+              <p class="text-gray-300 max-w-xs mt-6">
+                No matter where the transaction is taking place, people use
+                Troco when they need to acquire or sell something of value but
+                don't know the other party.
+              </p>
+            </div>
+
+            <div class="mt-6 grid space-y-3">
+              <a
+                class="inline-flex items-center gap-x-4 text-gray-300 hover:text-gray-400 transition-all duration-300"
+                href="#"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                Trococompany@gmail.com
+              </a>
+
+              <a
+                class="inline-flex items-center gap-x-4 text-gray-300 hover:text-gray-400 transition-all duration-300"
+                href="#"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-phone"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                (888) 253 145 148
+              </a>
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <h4 class="font-semibold text-gray-100 uppercase">Company</h4>
+
+            <div class="mt-6 grid space-y-3">
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >Home</a
+                >
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >About</a
+                >
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >Features</a
+                >
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >Testimonials</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <h4 class="font-semibold text-gray-100 uppercase">Product</h4>
+
+            <div class="mt-6 grid space-y-3">
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >Services</a
+                >
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="#"
+                  >Download</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <h4 class="font-semibold text-gray-100 uppercase">
+              Important Links
+            </h4>
+
+            <div class="mt-6 grid space-y-3">
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="privacy_policy.html"
+                  >Privacy Policy
+                </a>
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="terms.html"
+                  >Terms & Conditions</a
+                >
+              </p>
+              <p>
+                <a
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="safety.html"
+                  >Protection & Safety</a
+                >
+              </p>
+              <p>
+                <a
+                  style="color: red"
+                  class="inline-flex gap-x-2 text-base text-gray-300 hover:text-gray-400 transition-all duration-300"
+                  href="delete_acct.html"
+                  >Delete Account</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-4 bg-[#1C2940]">
+        <!-- 1B283F -->
+        <div class="container">
+          <div class="flex justify-between items-center">
+            <p class="text-base text-white">
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              © Troco Nigeria
+            </p>
+
+            <div>
+              <a
+                class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-md border border-transparent text-white hover:bg-primary transition-all duration-300"
+                href="#"
+              >
+                <svg
+                  class="flex-shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-md border border-transparent text-white hover:bg-primary transition-all duration-300"
+                href="#"
+              >
+                <svg
+                  class="flex-shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-md border border-transparent text-white hover:bg-primary transition-all duration-300"
+                href="#"
+              >
+                <svg
+                  class="flex-shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Form submission
+      document
+        .getElementById("delete-account-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Show confirmation modal
+          document.getElementById("confirmation-modal").classList.add("active");
+        });
+
+      // Cancel deletion
+      document
+        .getElementById("modal-cancel-btn")
+        .addEventListener("click", function () {
+          document
+            .getElementById("confirmation-modal")
+            .classList.remove("active");
+        });
+
+      // Confirm deletion
+      document
+        .getElementById("modal-confirm-btn")
+        .addEventListener("click", function () {
+          // Hide modal
+          document
+            .getElementById("confirmation-modal")
+            .classList.remove("active");
+
+          // Get form data
+          const firstOrLastName =
+            document.getElementById("firstOrLastName").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          // Show loading state
+          const deleteBtn = document.getElementById("delete-btn");
+          deleteBtn.classList.add("loading");
+          document.getElementById("spinner").style.display = "inline-block";
+
+          // Hide any previous error
+          document.getElementById("error-message").style.display = "none";
+
+          // Call the API
+          fetch(
+            "https://trocotechnologylimitedserver.space/api/v1/deleteAccount_web",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                email: email,
+                firstOrLastName: firstOrLastName,
+                password: password,
+              }),
+            }
+          )
+            .then((response) => {
+              // Check if the response is ok (status in the range 200-299)
+              if (!response.ok) {
+                return response.json().then((data) => {
+                  throw new Error(data.message || "Failed to delete account");
+                });
+              }
+              return response.json();
+            })
+            .then((data) => {
+              // Hide loading state
+              deleteBtn.classList.remove("loading");
+              document.getElementById("spinner").style.display = "none";
+
+              // Show success message
+              document.getElementById("delete-form-container").style.display =
+                "none";
+              document.getElementById("success-container").style.display =
+                "block";
+            })
+            .catch((error) => {
+              // Hide loading state
+              deleteBtn.classList.remove("loading");
+              document.getElementById("spinner").style.display = "none";
+
+              // Show error message
+              const errorMessage = document.getElementById("error-message");
+              errorMessage.textContent =
+                error.message ||
+                "An error occurred while trying to delete your account. Please try again.";
+              errorMessage.style.display = "block";
+            });
+        });
+
+      // Return to home button
+      document
+        .getElementById("home-btn")
+        .addEventListener("click", function () {
+          // Redirect to home page
+          window.location.href = "index.html";
+        });
+    </script>
+
+    <!-- Preline Js -->
+    <script src="assets/libs/preline/preline.js"></script>
+
+    <!-- Lucide Js -->
+    <script src="assets/libs/lucide/umd/lucide.min.js"></script>
+
+    <!-- Gumshoe Js -->
+    <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
+
+    <!-- Jarallax Js -->
+    <script src="assets/libs/jarallax/jarallax.min.js"></script>
+
+    <!-- Swiper Bundle Js -->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Swiper Js -->
+    <script src="assets/js/swiper.js"></script>
+
+    <!-- Main App Js -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
